@@ -36,7 +36,7 @@ class _QuranViewState extends State<QuranView> {
                     return AlertDialog(
                       title: Text(verse),
                       actions: [
-                        FlatButton(
+                        ElevatedButton(
                           child: Text('save progress'),
                           onPressed: () {
                             Navigator.of(context).pop();
