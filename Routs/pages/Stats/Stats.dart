@@ -8,7 +8,7 @@ class Stats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(z
         title: Text('stats'),
       ),
     );

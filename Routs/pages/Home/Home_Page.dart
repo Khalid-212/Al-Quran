@@ -1,9 +1,11 @@
-import 'package:alquran/pages/Quran_Page.dart';
-import 'package:alquran/pages/Stats.dart';
-import 'package:alquran/pages/SurahList.dart';
+import 'package:alquran/pages/QuranView/Quran_Page.dart';
+// import 'package:alquran/pages/Stats/Stats.dart';
+import 'package:alquran/pages/Home/SurahList.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:quran/quran.dart';
+
+import 'SurahList.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,12 +20,12 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       _selectedIndex = index;
     });
-    if (_selectedIndex == 1) {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (BuildContext context) {
-        return Stats();
-      }));
-    }
+    // if (_selectedIndex == 1) {
+    //   Navigator.of(context)
+    //       .push(MaterialPageRoute(builder: (BuildContext context) {
+    //     return Stats();
+    //   }));
+    // }
   }
 
   @override
@@ -136,15 +138,15 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
 
-          ElevatedButton(
-            onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (BuildContext context) {
-                return selectedPage();
-              }));
-            },
-            child: Text('click'),
-          ),
+          // ElevatedButton(
+          //   onPressed: () {
+          //     Navigator.of(context)
+          //         .push(MaterialPageRoute(builder: (BuildContext context) {
+          //       return selectedPage();
+          //     }));
+          //   },
+          //   child: Text('click'),
+          // ),
           SurahList()
         ],
       ),
